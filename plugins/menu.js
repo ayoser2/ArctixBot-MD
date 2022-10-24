@@ -2,7 +2,7 @@ import { promises } from 'fs'
 import { join } from 'path'
 import { xpRange } from '../lib/levelling.js'
 let tags = {
-  'main': '𝗔𝗥𝗖𝗧𝗜𝗫 𝗕𝗢𝗧 𝗠𝗔𝗜𝗡',
+  'main': '𝗤𝗨𝗘𝗘𝗡 𝗟𝗜𝗦𝗔 𝗕𝗢𝗧 𝗠𝗔𝗜𝗡',
   'game': '𝗚𝗔𝗠𝗘',
   'rpg': '𝗥𝗣𝗚 𝗚𝗔𝗠𝗘𝗦',
   'xp': '𝗫𝗣 & 𝗟𝗜𝗠𝗜𝗧',
@@ -24,28 +24,28 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-╭─━━━❰ 𝐀𝐑𝐂𝐓𝐈𝐗 𝐁𝐎𝐓 𝐈𝐍𝐂❱
-┃ 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝐀𝐑𝐂𝐓𝐈𝐗 𝐁𝐎𝐓
+╭─━━━❰ 𝐐𝐔𝐄𝐄𝐍 𝐋𝐈𝐒𝐀 𝐁𝐎𝐓 𝐌𝐃 ❱
+┃ 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗕𝗢𝗧 𝗠𝗘𝗡𝗨
 ┖━━━━━━━━━━━━━━━⦂
 
 ╭━━━━❰ 𝗨𝗦𝗘𝗥 ❱
-┃ 🗿 𝗟𝗜𝗠𝗜𝗧 : *%limit Limit*
-┃ 🗿 𝗥𝗢𝗟𝗘 : *%role*
-┃ 🗿 𝗟𝗘𝗩𝗘𝗟 : *%level (%exp / %maxexp)*
-┃ 🗿 𝗧𝗢𝗧𝗔𝗟 𝗫𝗣 : %totalexp ✨
+┃ 💣 𝗟𝗜𝗠𝗜𝗧 : *%limit Limit*
+┃ 🎐 𝗥𝗢𝗟𝗘 : *%role*
+┃ 📈 𝗟𝗘𝗩𝗘𝗟 : *%level (%exp / %maxexp)*
+┃ 📄 𝗧𝗢𝗧𝗔𝗟 𝗫𝗣 : %totalexp ✨
 ┃ 
-┃ 🌍 𝗗𝗔𝗧𝗘: *%date*
-┃ 🌍 𝗧𝗜𝗠𝗘: *%time*
+┃ 📅 𝗗𝗔𝗧𝗘: *%date*
+┃ 🕓 𝗧𝗜𝗠𝗘: *%time*
 ┃
-┃ 🎲 𝗨𝗣𝗧𝗜𝗠𝗘: *%uptime (%muptime)*
-┃ 🎲 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘: %rtotalreg of %totalreg
+┃ ⏳ 𝗨𝗣𝗧𝗜𝗠𝗘: *%uptime (%muptime)*
+┃ 📄 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘: %rtotalreg of %totalreg
 ┗━━━━━━━━━━━━━━━━⦂
 %readmore`.trimStart(),
-  header: '╭━━━❰ %category ❱',
-  body: '┃ ⚜️ %cmd %islimit %isPremium',
+  header: '╭━━━❰ ✿ %category ✿ ❱',
+  body: '┃ ❏ %cmd %islimit %isPremium',
   footer: '╰━━━━━━━⦂\n',
   after: `
-𝐀𝐑𝐂𝐓𝐈𝐗 𝐁𝐎𝐓 𝐈𝐍𝐂 |©𝐒𝐢𝐛𝐬𝐬𝐬𝐬𝐬𝐬𝐬𝐬
+𝐐𝐔𝐄𝐄𝐍 𝐋𝐈𝐒𝐀 𝐁𝐎𝐓 𝐌𝐃 |𝙲𝚛𝚎𝚊𝚝𝚎𝚍 𝚋𝚢 𝙰𝚢𝚘𝚍𝚢𝚊 |թօաҽɾժ ճվ ตօղցօᗪ乃
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
@@ -147,11 +147,11 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     const pp = await conn.profilePictureUrl(conn.user.jid, 'image').catch(_ => './media/arctix.jpg')
-    conn.sendHydrated(m.chat, text.trim(), author, pp, 'https://www.instagram.com/sibssssssss', 'INSTAGRAM', owner[0][0], 'OWNER', [
-      ['BOTGROUP', '/donasi'],
+    conn.sendHydrated(m.chat, text.trim(), author, pp, 'https://www.instagram.com/blabla', 'INSTAGRAM', owner[0][0], 'OWNER', [
+      ['BOTGROUP', '乃ㄥ卂 乃ㄥ卂'],
       ['SPEED', '/ping'],
       ['OWNER', '/owner']
-    ], m, { asLocation: 1 })
+    ], m, { asLocation: false })
   } catch (e) {
     conn.reply(m.chat, 'My friend, menu  error', m)
     throw e
