@@ -37,7 +37,7 @@ let handler = async (m, { conn }) => {
     }
   })
   let old = performance.now()
-  await m.reply('_Testing Arctix  Bot speed..._')
+  await m.reply('_Testing Lisa md Bot speed..._')
   let neww = performance.now()
   let speed = neww - old
   m.reply(`

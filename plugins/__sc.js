@@ -1,7 +1,7 @@
 let handler = (t) => {
-    t.reply('*https://github.com/Sibuuu07/ArctixBot-MD*')
+    t.reply('*https://github.com/payme*')
 }
 
-handler.command = ['sc']
+handler.command = ['sc','script','git']
 
 export default handler
